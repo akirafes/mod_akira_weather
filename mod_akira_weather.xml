@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="module" client="site" method="upgrade">
+  <name>Akira Weather</name>
+  <author>Fernando Espinosa S.</author>
+  <authorEmail>akira_fes@hotmail.com</authorEmail>
+  <authorUrl>clubsolaris.com</authorUrl>
+  <creationDate>July 2014</creationDate>
+  <copyright>Copyright Notice</copyright>
+  <license>Module License Agreement</license>
+  <version>0.0.2</version>
+  <description>Wunderground Weather module for joomla</description>
+  <files>
+    <filename module="mod_akira_weather">mod_akira_weather.php</filename>
+    <filename module="mod_akira_weather">mod_akira_weather.xml</filename>
+    <filename module="mod_akira_weather">index.html</filename>
+    <folder>tmpl</folder>
+    <folder>css</folder>
+    <folder>vendors</folder>
+    <folder>images</folder>
+  </files>
+  <config>
+    <fields name="params">
+      <fieldset name="Wunderground" label="Wunderground Config">
+        <field name="apiKey" type="text" default="f47b39a2503f8e6f"  label="Wunderground API Key:" description="Wunderground API Key" />
+        <field name="stationId" type="text" default="IBAJACAL12"  label="Weather Station ID:"  />
+      </fieldset>
+      <fieldset name="format" label="Formats and Scales">
+          <field type="list" name="timeFormat" default="am" label="Time Format:" description="AM/PM or 24 H format">
+              <option value="am">AM/PM</option>
+              <option value="24">24 H</option>
+          </field>
+          <field type="list" name="temperatureScale" default="f" label="Temperature Scale:" description="Celsius or Fahrenheit">
+              <option value="c">Celsius</option>
+              <option value="f">Fahrenheit</option>
+          </field>
+      </fieldset>
+      <fieldset name="display" label="Display Config">
+          <field type="list" name="language" default="en" label="Language:" description="English or Spanish">
+              <option value="en">English</option>
+              <option value="es">Spanish</option>
+          </field>
+          <field type="list" name="displaySunset" default="no" label="Display Sunset/Sunrise:" >
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+          </field>
+          <field name="moduleClassSu" type="text" default=""  label="Module Class Suffix:" description="Module Class Suffix" />
+          <field name="moduleclass_sfx"
+                 type="text"
+                 label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                 description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"/>
+      </fieldset>
+    </fields>
+  </config>
+</extension>
